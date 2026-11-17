@@ -124,7 +124,7 @@ header.scrolled{background:rgba(4,15,38,.9);backdrop-filter:blur(16px);box-shado
 .svc h3{font-size:22px;margin-bottom:12px}.svc p{color:var(--muted);font-weight:500;font-size:15.5px}
 .svc-link{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-weight:700;color:var(--dgreen);font-size:15px}
 /* services showcase (interactive split) */
-.svcx-grid{display:grid;grid-template-columns:1.1fr 2fr;gap:34px;align-items:stretch}
+.svcx-grid{display:grid;grid-template-columns:.9fr 2.14fr;gap:34px;align-items:stretch}
 .svcx-list{display:flex;flex-direction:column;gap:8px}
 .svcx-item{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;cursor:pointer;transition:background .25s,border-color .25s,box-shadow .25s,transform .25s;font-family:'Montserrat',sans-serif}
 .svcx-item:hover{border-color:rgba(118,224,0,.4);transform:translateX(3px)}
@@ -132,7 +132,7 @@ header.scrolled{background:rgba(4,15,38,.9);backdrop-filter:blur(16px);box-shado
 .svcx-n{flex:none;width:40px;height:40px;border-radius:12px;background:#EEF2F7;color:#8A99AE;font-weight:800;font-size:14px;letter-spacing:.3px;display:inline-flex;align-items:center;justify-content:center;transition:all .28s}
 .svcx-item.active .svcx-n{background:linear-gradient(135deg,#A6F23A,var(--green2));color:var(--navy);box-shadow:0 8px 18px rgba(118,224,0,.4)}
 .svcx-it{flex:1;min-width:0;display:block}
-.svcx-it b{display:block;font-size:18px;color:var(--navy);line-height:1.25;white-space:nowrap}
+.svcx-it b{display:block;font-size:19px;color:var(--navy);line-height:1.2}
 .svcx-it em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);font-weight:500;margin-top:3px}
 .svcx-ar{flex:none;opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .25s}
 .svcx-item.active .svcx-ar{opacity:1;transform:none}
@@ -873,7 +873,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
 <section class="sec svcx" id="services"><div class="svcx-sticky"><div class="wrap">
   <div class="sec-head reveal"><span class="eyebrow">Amit kínálunk</span><h2>Minden, amire a weboldalának szüksége van</h2><p>Egyetlen landing oldaltól a teljes egyedi platformig, webáruházig vagy CMS-ig — a SEO-val együtt, amely a növekedést segíti. A dizájnt és a kódot is mi kezeljük.</p></div>
   <div class="svcx-grid reveal">
-    <div class="svcx-list"><button type="button" class="svcx-item active" data-i="0"><span class="svcx-n">01</span><span class="svcx-it"><b>Egyedi webfejlesztés</b></span><span class="svcx-ar">
+    <div class="svcx-list"><button type="button" class="svcx-item active" data-i="0"><span class="svcx-n">01</span><span class="svcx-it"><b>Egyedi webfejlesztés</b><em>Egyedi weboldalak, webalkalmazások és headless megoldások</em></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -889,7 +889,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="1"><span class="svcx-n">02</span><span class="svcx-it"><b>Shopify fejlesztés</b></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="1"><span class="svcx-n">02</span><span class="svcx-it"><b>Shopify fejlesztés</b><em>Egyedi sablonok, B2B és app-integrációk</em></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -905,7 +905,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="2"><span class="svcx-n">03</span><span class="svcx-it"><b>WordPress és CMS</b></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="2"><span class="svcx-n">03</span><span class="svcx-it"><b>WordPress és CMS</b><em>WordPress, WooCommerce és rugalmas CMS</em></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -921,7 +921,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="3"><span class="svcx-n">04</span><span class="svcx-it"><b>SEO és növekedés</b></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="3"><span class="svcx-n">04</span><span class="svcx-it"><b>SEO és növekedés</b><em>Technikai SEO, tartalom és strukturált adatok</em></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -937,7 +937,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="4"><span class="svcx-n">05</span><span class="svcx-it"><b>Sebességoptimalizálás</b></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="4"><span class="svcx-n">05</span><span class="svcx-it"><b>Sebességoptimalizálás</b><em>Core Web Vitals és eszközoptimalizálás</em></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -953,7 +953,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="5"><span class="svcx-n">06</span><span class="svcx-it"><b>UI / UX és dizájn</b></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="5"><span class="svcx-n">06</span><span class="svcx-it"><b>UI / UX és dizájn</b><em>Tervek, arculati csomagok és dizájnrendszerek</em></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
