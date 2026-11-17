@@ -124,7 +124,7 @@ header.scrolled{background:rgba(4,15,38,.9);backdrop-filter:blur(16px);box-shado
 .svc h3{font-size:22px;margin-bottom:12px}.svc p{color:var(--muted);font-weight:500;font-size:15.5px}
 .svc-link{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-weight:700;color:var(--dgreen);font-size:15px}
 /* services showcase (interactive split) */
-.svcx-grid{display:grid;grid-template-columns:.9fr 2.14fr;gap:34px;align-items:stretch}
+.svcx-grid{display:grid;grid-template-columns:1.1fr 2fr;gap:34px;align-items:stretch}
 .svcx-list{display:flex;flex-direction:column;gap:8px}
 .svcx-item{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;cursor:pointer;transition:background .25s,border-color .25s,box-shadow .25s,transform .25s;font-family:'Montserrat',sans-serif}
 .svcx-item:hover{border-color:rgba(118,224,0,.4);transform:translateX(3px)}
@@ -132,7 +132,7 @@ header.scrolled{background:rgba(4,15,38,.9);backdrop-filter:blur(16px);box-shado
 .svcx-n{flex:none;width:40px;height:40px;border-radius:12px;background:#EEF2F7;color:#8A99AE;font-weight:800;font-size:14px;letter-spacing:.3px;display:inline-flex;align-items:center;justify-content:center;transition:all .28s}
 .svcx-item.active .svcx-n{background:linear-gradient(135deg,#A6F23A,var(--green2));color:var(--navy);box-shadow:0 8px 18px rgba(118,224,0,.4)}
 .svcx-it{flex:1;min-width:0;display:block}
-.svcx-it b{display:block;font-size:19px;color:var(--navy);line-height:1.2}
+.svcx-it b{display:block;font-size:18px;color:var(--navy);line-height:1.25;white-space:nowrap}
 .svcx-it em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);font-weight:500;margin-top:3px}
 .svcx-ar{flex:none;opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .25s}
 .svcx-item.active .svcx-ar{opacity:1;transform:none}
@@ -147,8 +147,8 @@ header.scrolled{background:rgba(4,15,38,.9);backdrop-filter:blur(16px);box-shado
 .svcx-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);color:#DCE6F2;font-size:13px;font-weight:600;padding:8px 14px;border-radius:30px}
 .svcx-foot{margin-top:28px;position:relative;z-index:2}
 .svcx-foot .svcx-tags{margin-top:0}
-.svcx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);width:100%;background:none;border-left:0;border-right:0;border-bottom:0;color:#A6F23A;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14.5px;cursor:pointer;transition:gap .25s}
-.svcx-cta:hover{gap:13px}
+.svcx-cta{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;margin-top:26px;padding:13px 26px;border:0;border-radius:12px;background:linear-gradient(135deg,#A6F23A,var(--green2));color:var(--navy);font-family:'Montserrat',sans-serif;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 10px 24px rgba(118,224,0,.28);transition:transform .25s,box-shadow .25s}
+.svcx-cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(118,224,0,.4)}
 .svcx .sec-head{max-width:none}
 .svcx .sec-head h2{white-space:nowrap;font-size:46px}
 .svcx .sec-head p{max-width:720px;margin-left:auto;margin-right:auto}
@@ -316,7 +316,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
  .svcx.pinned .svcx-ghost{font-size:96px}
  .svcx.pinned .svcx-tags{gap:8px;margin-top:0}
  .svcx.pinned .svcx-tag{font-size:11.5px;padding:6px 10px;gap:6px}
- .svcx.pinned .svcx-cta{margin-top:14px;padding-top:13px;font-size:13px}
+ .svcx.pinned .svcx-cta{margin-top:18px;padding:11px 22px;font-size:13px}
  .svcx.pinned .svcx-dots{display:flex;padding-top:14px}
  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}.hero{display:block;min-height:auto;padding:112px 0 72px}.hero h1{font-size:40px}.hero h1 br{display:none}.hero p.lead,.hero-rate{max-width:100%}.hero p.lead{font-size:16px}.hero-eyebrow{font-size:11px;letter-spacing:.1em;padding:7px 14px}.hero .wrap{min-width:0}.hero .wrap>div{min-width:0}.showcase,.hero-rate .rt{min-width:0}
  .nav .lg{height:45px}
@@ -873,7 +873,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
 <section class="sec svcx" id="services"><div class="svcx-sticky"><div class="wrap">
   <div class="sec-head reveal"><span class="eyebrow">What we do</span><h2>Everything your website needs</h2><p>From a single landing page to a full custom platform, store or CMS build — plus the SEO to help it grow. We handle the design and the code.</p></div>
   <div class="svcx-grid reveal">
-    <div class="svcx-list"><button type="button" class="svcx-item active" data-i="0"><span class="svcx-n">01</span><span class="svcx-it"><b>Custom Web Development</b><em>Bespoke websites, web apps & headless builds</em></span><span class="svcx-ar">
+    <div class="svcx-list"><button type="button" class="svcx-item active" data-i="0"><span class="svcx-n">01</span><span class="svcx-it"><b>Custom Web Development</b></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -889,7 +889,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="1"><span class="svcx-n">02</span><span class="svcx-it"><b>Shopify Development</b><em>Custom themes, B2B & app integrations</em></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="1"><span class="svcx-n">02</span><span class="svcx-it"><b>Shopify Development</b></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -905,7 +905,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="2"><span class="svcx-n">03</span><span class="svcx-it"><b>WordPress & CMS</b><em>WordPress, WooCommerce & flexible CMS</em></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="2"><span class="svcx-n">03</span><span class="svcx-it"><b>WordPress & CMS</b></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -921,7 +921,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="3"><span class="svcx-n">04</span><span class="svcx-it"><b>SEO & Growth</b><em>Technical SEO, content & structured data</em></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="3"><span class="svcx-n">04</span><span class="svcx-it"><b>SEO & Growth</b></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -937,7 +937,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="4"><span class="svcx-n">05</span><span class="svcx-it"><b>Speed Optimization</b><em>Core Web Vitals & asset optimization</em></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="4"><span class="svcx-n">05</span><span class="svcx-it"><b>Speed Optimization</b></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -953,7 +953,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
   <path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" />
 </svg>
-</span></button><button type="button" class="svcx-item" data-i="5"><span class="svcx-n">06</span><span class="svcx-it"><b>UI / UX & Design</b><em>Mockups, brand kits & design systems</em></span><span class="svcx-ar">
+</span></button><button type="button" class="svcx-item" data-i="5"><span class="svcx-n">06</span><span class="svcx-it"><b>UI / UX & Design</b></span><span class="svcx-ar">
 <svg
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -1055,7 +1055,7 @@ Analytics & integrations</span></div><button type="button" class="svcx-cta" oncl
   height="17"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#A6F23A"
+  stroke="#06183A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -1148,7 +1148,7 @@ Conversion-focused</span></div><button type="button" class="svcx-cta" onclick="o
   height="17"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#A6F23A"
+  stroke="#06183A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -1241,7 +1241,7 @@ Secure & scalable</span></div><button type="button" class="svcx-cta" onclick="op
   height="17"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#A6F23A"
+  stroke="#06183A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -1333,7 +1333,7 @@ Clear reporting</span></div><button type="button" class="svcx-cta" onclick="open
   height="17"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#A6F23A"
+  stroke="#06183A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -1425,7 +1425,7 @@ Lighthouse 90+</span></div><button type="button" class="svcx-cta" onclick="openQ
   height="17"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#A6F23A"
+  stroke="#06183A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -1520,7 +1520,7 @@ Fully responsive</span></div><button type="button" class="svcx-cta" onclick="ope
   height="17"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#A6F23A"
+  stroke="#06183A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
