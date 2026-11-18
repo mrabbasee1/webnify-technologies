@@ -210,13 +210,16 @@ header.hide{transform:translateY(-100%)}
 .work-meta p{color:#AEC0D8;font-weight:500;font-size:14.5px}
 .work-link{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-weight:700;color:var(--green);font-size:14px}
 /* process */
-.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.step{padding:32px 28px;border-radius:18px;background:var(--gray);border:1px solid var(--line);transition:transform .25s}
-.step:hover{transform:translateY(-6px)}
-.step-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-.step-no{font-size:44px;font-weight:800;color:#D7E0EC}
-.step-ic{width:50px;height:50px;border-radius:13px;background:var(--navy);display:flex;align-items:center;justify-content:center}
-.step h3{font-size:20px;margin-bottom:10px}.step p{color:var(--muted);font-weight:500;font-size:14.5px}
+.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.step-grid::before{content:"";position:absolute;top:58px;left:11%;right:11%;height:2px;background:repeating-linear-gradient(90deg,rgba(11,45,91,.17) 0 7px,transparent 7px 15px);z-index:0}
+.step{position:relative;z-index:1;padding:30px 26px 28px;border-radius:20px;background:#fff;border:1px solid var(--line);overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.step:hover{transform:translateY(-8px);border-color:rgba(118,224,0,.5);box-shadow:0 24px 50px rgba(11,45,91,.12)}
+.step-no{position:absolute;top:-4px;right:14px;font-size:92px;line-height:1;font-weight:800;letter-spacing:-.04em;color:rgba(11,45,91,.05);z-index:0;pointer-events:none;transition:color .3s}
+.step:hover .step-no{color:rgba(118,224,0,.12)}
+.step-ic{position:relative;z-index:2;width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#A6F23A,var(--green2));display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 10px 22px rgba(92,197,0,.3);transition:transform .3s}
+.step:hover .step-ic{transform:scale(1.07) rotate(-3deg)}
+.step h3{position:relative;z-index:2;font-size:20px;margin-bottom:10px}
+.step p{position:relative;z-index:2;color:var(--muted);font-weight:500;font-size:14.5px;line-height:1.6}
 /* about */
 .about .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
 .about-visual{position:relative;border-radius:26px;overflow:hidden;background:var(--navy);aspect-ratio:4/4.2;box-shadow:0 30px 70px rgba(11,45,91,.25);display:flex;align-items:center;justify-content:center}
@@ -352,7 +355,7 @@ footer{background:var(--navy3);color:#fff;padding:76px 0 32px;position:relative;
  .sc-tab{padding:6px 13px;font-size:12px}
  .hero-chips{flex-wrap:wrap}.chip{flex:1 1 44%;max-width:none}.chip4{display:flex}
  .bx-view{overflow-y:auto;-webkit-overflow-scrolling:touch}.bx-page{position:relative;display:none;transform:none !important}.bx-page.active{display:block}.sc-prog,.bx-hint,.bx-pag{display:none}.bx-hint-m{display:inline-flex}
- .svc-grid,.work-grid,.rev-grid,.team-grid{grid-template-columns:1fr 1fr}.step-grid,.statband .wrap{grid-template-columns:1fr 1fr;gap:24px}
+ .svc-grid,.work-grid,.rev-grid,.team-grid{grid-template-columns:1fr 1fr}.step-grid,.statband .wrap{grid-template-columns:1fr 1fr;gap:24px}.step-grid::before{display:none}
  .statband .st+.st{border-left:0}.nav ul,.nav-right .btn{display:none}.burger{display:block}
  .sec-head h2,.about h2,.contact h2,.cta h2{font-size:34px}.sec{padding:58px 0}.foot{grid-template-columns:1fr 1fr}.row2{grid-template-columns:1fr}
  .qm-box{grid-template-columns:1fr;max-width:460px}.qm-side{display:none}
@@ -2000,7 +2003,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
 
 <section class="sec" id="process"><div class="wrap">
   <div class="sec-head reveal"><span class="eyebrow">How we work</span><h2>A simple, proven process</h2><p>Clear steps, regular updates and a design you approve before we build.</p></div>
-  <div class="step-grid"><div class="step reveal"><div class="step-top"><span class="step-no">01</span><div class="step-ic">
+  <div class="step-grid"><div class="step reveal"><span class="step-no">01</span><div class="step-ic">
 <svg
   class="lucide lucide-search"
   xmlns="http://www.w3.org/2000/svg"
@@ -2008,7 +2011,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   height="24"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#76E000"
+  stroke="#07193A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -2016,7 +2019,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   <circle cx="11" cy="11" r="8" />
   <path d="m21 21-4.3-4.3" />
 </svg>
-</div></div><h3>Discovery</h3><p>We learn your goals, audience and market, audit your current site and map the fastest path to growth.</p></div><div class="step reveal"><div class="step-top"><span class="step-no">02</span><div class="step-ic">
+</div><h3>Discovery</h3><p>We learn your goals, audience and market, audit your current site and map the fastest path to growth.</p></div><div class="step reveal"><span class="step-no">02</span><div class="step-ic">
 <svg
   class="lucide lucide-pen-tool"
   xmlns="http://www.w3.org/2000/svg"
@@ -2024,7 +2027,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   height="24"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#76E000"
+  stroke="#07193A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -2034,7 +2037,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   <path d="m2.3 2.3 7.286 7.286" />
   <circle cx="11" cy="11" r="2" />
 </svg>
-</div></div><h3>Design</h3><p>You approve a premium homepage and page designs in your brand before a single line of code is written.</p></div><div class="step reveal"><div class="step-top"><span class="step-no">03</span><div class="step-ic">
+</div><h3>Design</h3><p>You approve a premium homepage and page designs in your brand before a single line of code is written.</p></div><div class="step reveal"><span class="step-no">03</span><div class="step-ic">
 <svg
   class="lucide lucide-code"
   xmlns="http://www.w3.org/2000/svg"
@@ -2042,7 +2045,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   height="24"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#76E000"
+  stroke="#07193A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -2050,7 +2053,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   <polyline points="16 18 22 12 16 6" />
   <polyline points="8 6 2 12 8 18" />
 </svg>
-</div></div><h3>Build</h3><p>Clean, fast, custom code — web app, CMS or store — tested on real devices and easy for your team to edit.</p></div><div class="step reveal"><div class="step-top"><span class="step-no">04</span><div class="step-ic">
+</div><h3>Build</h3><p>Clean, fast, custom code — web app, CMS or store — tested on real devices and easy for your team to edit.</p></div><div class="step reveal"><span class="step-no">04</span><div class="step-ic">
 <svg
   class="lucide lucide-rocket"
   xmlns="http://www.w3.org/2000/svg"
@@ -2058,7 +2061,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   height="24"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="#76E000"
+  stroke="#07193A"
   stroke-width="1.7"
   stroke-linecap="round"
   stroke-linejoin="round"
@@ -2068,7 +2071,7 @@ Design systems</span></div><button type="button" class="svcx-cta" onclick="openQ
   <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
   <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
 </svg>
-</div></div><h3>Launch & Grow</h3><p>We launch, set up SEO and analytics, then keep improving speed, UX and conversion after go-live.</p></div></div>
+</div><h3>Launch & Grow</h3><p>We launch, set up SEO and analytics, then keep improving speed, UX and conversion after go-live.</p></div></div>
 </div></section>
 
 <section class="sec" id="team"><div class="wrap">
@@ -2805,21 +2808,26 @@ function initNet(cid,hsel){
 }
 initNet('net','.hero');initNet('net2','.work-wrap');
 /* portfolio marquee: auto-moves; pauses on hover; sideways wheel / drag / swipe moves it by hand */
-(function(){var mq=document.querySelector('.wk-marq');if(!mq)return;var tr=mq.querySelector('.wk-track'),x=0,half=0,hover=false,drag=false,last=0,hold=0,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  function set(){half=tr.scrollWidth/2;if(half)x=((x%half)+half)%half;tr.style.transform='translate3d('+(-x)+'px,0,0)'}
-  function tick(ts){if(!last)last=ts;var dt=Math.min(50,ts-last);last=ts;if(!hover&&!drag&&!RM&&ts>hold){x+=dt*.047;set()}requestAnimationFrame(tick)}
+(function(){var mq=document.querySelector('.wk-marq');if(!mq)return;var tr=mq.querySelector('.wk-track'),x=0,half=0,hover=false,drag=false,last=0,hold=0,vx=0,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function measure(){half=tr.scrollWidth/2}
+  function set(){if(half)x=((x%half)+half)%half;tr.style.transform='translate3d('+(-x)+'px,0,0)'}
+  function tick(ts){if(!half)measure();if(!last)last=ts;var dt=Math.min(50,ts-last);last=ts;
+    if(drag){}
+    else if(vx<-0.004||vx>0.004){x+=vx*dt;vx*=Math.pow(0.92,dt/16.7);set();if(vx>-0.004&&vx<0.004){vx=0;hold=ts+700}}
+    else if(!hover&&!RM&&ts>hold){x+=dt*.047;set()}
+    requestAnimationFrame(tick)}
   mq.addEventListener('mouseenter',function(){hover=true});mq.addEventListener('mouseleave',function(){hover=false;drag=false;mq.classList.remove('drag')});
-  mq.addEventListener('wheel',function(e){var dx=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:(e.shiftKey?e.deltaY:0);if(!dx)return;e.preventDefault();e.stopPropagation();x+=dx;set()},{passive:false});
+  mq.addEventListener('wheel',function(e){var dx=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:(e.shiftKey?e.deltaY:0);if(!dx)return;e.preventDefault();e.stopPropagation();vx=0;x+=dx;hold=performance.now()+700;set()},{passive:false});
   var sx=0,moved=0;
-  mq.addEventListener('mousedown',function(e){if(e.button!==0)return;drag=true;sx=e.clientX;moved=0;e.preventDefault()});
+  mq.addEventListener('mousedown',function(e){if(e.button!==0)return;drag=true;vx=0;sx=e.clientX;moved=0;e.preventDefault()});
   addEventListener('mousemove',function(e){if(!drag)return;var d=e.clientX-sx;sx=e.clientX;moved+=Math.abs(d);if(moved>5)mq.classList.add('drag');x-=d;set()});
-  addEventListener('mouseup',function(){drag=false;mq.classList.remove('drag')});
+  addEventListener('mouseup',function(){if(drag){drag=false;mq.classList.remove('drag');hold=performance.now()+700}});
   mq.addEventListener('click',function(e){if(moved>5){e.preventDefault();e.stopPropagation();moved=0}},true);
-  var tx=0,ty=0,dir=0;
-  mq.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.touches[0].clientY;dir=0},{passive:true});
-  mq.addEventListener('touchmove',function(e){var cx=e.touches[0].clientX,cy=e.touches[0].clientY,dx=cx-tx,dy=cy-ty;if(!dir&&(Math.abs(dx)>6||Math.abs(dy)>6))dir=Math.abs(dx)>Math.abs(dy)?1:2;if(dir===1){e.preventDefault();drag=true;x-=dx;tx=cx;ty=cy;set()}},{passive:false});
-  mq.addEventListener('touchend',function(){drag=false;hold=performance.now()+2500});
-  set();requestAnimationFrame(tick);
+  var tx=0,ty=0,dir=0,ptm=0;
+  mq.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.touches[0].clientY;dir=0;vx=0;drag=false;ptm=performance.now()},{passive:true});
+  mq.addEventListener('touchmove',function(e){var cx=e.touches[0].clientX,cy=e.touches[0].clientY,dx=cx-tx,dy=cy-ty;if(!dir&&(Math.abs(dx)>6||Math.abs(dy)>6))dir=Math.abs(dx)>Math.abs(dy)?1:2;if(dir===1){e.preventDefault();drag=true;var now=performance.now(),dd=now-ptm;if(dd>0){var nv=-dx/dd;vx=vx*0.7+nv*0.3}ptm=now;x-=dx;tx=cx;ty=cy;set()}},{passive:false});
+  mq.addEventListener('touchend',function(){if(drag){drag=false;if(vx>2.5)vx=2.5;if(vx<-2.5)vx=-2.5;hold=performance.now()+900}});
+  measure();addEventListener('resize',measure);set();requestAnimationFrame(tick);
 })();
 /* portfolio marquee: hover a card = auto-scroll its page; over the screenshot = scroll it yourself */
 if(!matchMedia('(hover:none)').matches){document.querySelectorAll('.wk').forEach(function(card){
