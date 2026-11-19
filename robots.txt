@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://webnifytechnologies.com/sitemap.xml
+Sitemap: https://www.webnifytechnologies.com/sitemap.xml

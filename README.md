@@ -3,8 +3,8 @@
 Marketing website for **Webnify Technologies** — a full-service studio for web
 development, CMS platforms, online stores and SEO.
 
-**Live site:** https://webnifytechnologies.com (English) and
-https://webnifytechnologies.com/hu/ (Hungarian).
+**Live site:** https://www.webnifytechnologies.com/ (English) and
+https://www.webnifytechnologies.com/hu/ (Hungarian).
 
 ## What's here
 
@@ -53,8 +53,9 @@ Testimonials · Contact · "Request a quote" modal.
 ## Deploy
 
 The live site is served by GitHub Pages from the `main` branch: every push to
-`main` is live on https://webnifytechnologies.com within a few minutes. The
-`CNAME` file holds the custom domain. The domain is registered at Hostinger,
+`main` is live on https://www.webnifytechnologies.com/ within a few minutes. The
+`CNAME` file holds the custom domain: the www address, which GitHub recommends
+for Pages (the bare domain redirects to it). The domain is registered at Hostinger,
 and its DNS (Hostinger nameservers) points to GitHub Pages: four `A` records
 for `@` (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153)
 and a `CNAME` record for `www` to `mrabbasee1.github.io`.
