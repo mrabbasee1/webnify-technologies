@@ -1,0 +1,29 @@
+# Webnify Technologies: speed settings for Hostinger (LiteSpeed / Apache).
+# GitHub Pages ignores this file.
+
+# Correct types for the modern formats used in assets/
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddType image/svg+xml .svg
+
+# Compress text files
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/json application/javascript text/javascript image/svg+xml
+</IfModule>
+
+# Browser caching: pages are always checked for updates, assets are kept.
+# To replace an image or font straight away, upload it under a new file name.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.woff2$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|png|jpe?g|svg)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.js$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
