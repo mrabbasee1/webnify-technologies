@@ -3,7 +3,8 @@
 Marketing website for **Webnify Technologies** — a full-service studio for web
 development, CMS platforms, online stores and SEO.
 
-**Live preview (private, in progress):** built and iterated via Claude.
+**Live site:** https://webnifytechnologies.com (English) and
+https://webnifytechnologies.com/hu/ (Hungarian).
 
 ## What's here
 
@@ -49,22 +50,30 @@ Testimonials · Contact · "Request a quote" modal.
   screen, smooth scrolling (Lenis) only on mouse/trackpad devices
 - Brand: Deep Navy `#0B2D5B`, Tech Green `#76E000`, Sora headings, Poppins body
 
-## Deploy (Hostinger or any static host)
+## Deploy
 
-Upload everything to the web root (`public_html/`): `index.html`, the `hu/`
-and `assets/` folders, `.htaccess`, `og.jpg`, `robots.txt` and `sitemap.xml`.
-No build or server needed. GitHub Pages serves the same files as they are.
+The live site is served by GitHub Pages from the `main` branch: every push to
+`main` is live on https://webnifytechnologies.com within a few minutes. The
+`CNAME` file holds the custom domain. The domain is registered at Hostinger,
+and its DNS (Hostinger nameservers) points to GitHub Pages: four `A` records
+for `@` (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153)
+and a `CNAME` record for `www` to `mrabbasee1.github.io`.
 
-To change an image or font straight away for returning visitors, upload it
-under a new file name (browsers keep assets cached for up to 30 days). After
-editing `assets/js/motion.js`, raise its `?v=` number in both pages.
+To move to Hostinger hosting (or any static host) instead, upload
+`index.html`, the `hu/` and `assets/` folders, `.htaccess`, `og.jpg`,
+`robots.txt` and `sitemap.xml` to the web root (`public_html/`) and point the
+DNS there. No build or server needed.
+
+After editing `assets/js/motion.js`, raise its `?v=` number in both pages. To
+replace an image or font straight away for returning visitors, give it a new
+file name (on Hostinger, `.htaccess` lets browsers keep assets for 30 days).
 
 ## Roadmap
 
 - Separate pages: Services, Work, About, Contact
 - Real team photos and names
 - Wire the contact / quote forms to an email or form endpoint
-- Final contact details and production domain
+- Final contact details
 
 ---
 
